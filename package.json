@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+   "@google-cloud/functions-framework": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.9.3",
+    "nodemailer": "^6.9.13",
+    "sequelize": "^6.37.1",
+    "uuid": "^9.0.1"
+  }
+}
