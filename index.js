@@ -89,15 +89,16 @@ functions.cloudEvent('helloPubSub', async (cloudEvent) => {
             }
         });
 
-        const allowedFields = {};
-        allowedFields.expiration_time = expirationTime;
-        allowedFields.verificationToken = verificationToken;
 
         await smtpConfig.sendMail(mailContent);
         
         console.debug("setting expiration Time");
         const expirationTime = new Date(Date.now() + 2 * 60 * 1000);
         console.debug("completed setting expiration Time");
+        const allowedFields = {};
+        allowedFields.expiration_time = expirationTime;
+        allowedFields.verificationToken = verificationToken;
+
         await User.update(allowedFields, { where: { id: id } });
 
         console.debug('User updated successfully');
