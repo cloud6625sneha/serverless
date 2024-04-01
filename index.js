@@ -36,8 +36,8 @@ functions.cloudEvent('helloPubSub', async (cloudEvent) => {
             from: 'webapp@snehayenduri.me',
             to: email,
             subject: 'Verify your email',
-            text: `Hello ${fName}, click the following link to verify your email: http://snehayenduri.me:8080/v1/user/self/verify/${verificationToken}`,
-            html: `<p>Hello ${fName}, click the following link to verify your email: <a href="http://snehayenduri.me:8080/v1/user/self/verify/${verificationToken}">Verify Email</a></p>`,
+            text: `Hello ${fName}, click the following link to verify your email: https://snehayenduri.me/v1/user/self/verify/${verificationToken}`,
+            html: `<p>Hello ${fName}, click the following link to verify your email: <a href="https://snehayenduri.me/v1/user/self/verify/${verificationToken}">Verify Email</a></p>`,
         };
 
         const User = sequelize.define("user", {
